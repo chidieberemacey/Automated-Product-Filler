@@ -1,0 +1,130 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html{
+  font-size: 14px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+:root{
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --pading-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-theme-variables{
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0 0 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* ================== RECENT ORDERS ================= */
+/* ================== RECENT ORDERS ================= */
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #181a1e;
+}
+
+main .recent-orders{
+  margin: 2rem;
+  /* background: var(--color-primary); */
+  padding: 2rem .8rem;
+  width: 60rem;
+}
+
+main .recent-orders h2{
+  margin-bottom: 0.8rem;
+  text-align: center;
+  color: #dce1eb;
+}
+
+main .recent-orders table{
+  background: #f6f6f9;
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  text-align: center;
+  box-shadow: 0 1.2rem 3rem rgba(125, 141, 161, 0.386);
+  transition: all 300ms ease;
+  color: #7380ec;
+}
+
+main .recent-orders table:hover{
+  box-shadow: none;
+}
+
+main table tbody td{
+  height: 2.8rem;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td{
+  border: none;
+}
+
+main .recent-orders a{
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: var(--color-primary);
+}
+
+
+@media screen and (max-width: 800px){
+
+  main table thead tr th:last-child, main table thead tr th:first-child{
+    display: none;
+  }
+
+  main table tbody tr td:last-child, main table tbody tr td:first-child{
+    display: none;
+  }
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
